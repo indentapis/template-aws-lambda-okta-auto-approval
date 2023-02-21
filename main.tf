@@ -10,8 +10,8 @@ terraform {
 
 # Indent + Okta Auto Approval Integration
 
-# Details: https://github.com/indentapis/integrations/tree/df7a83d97d7220dc20566871e81d90a20ec160e0/packages/stable/indent-integration-okta
-# Last Change: https://github.com/indentapis/integrations/commit/df7a83d97d7220dc20566871e81d90a20ec160e0
+# Details: https://github.com/indentapis/integrations/tree/22f653f6d56c4aa555c5bc9943f43acd4e0c0a84/packages/stable/indent-integration-okta
+# Last Change: https://github.com/indentapis/integrations/commit/22f653f6d56c4aa555c5bc9943f43acd4e0c0a84
 
 module "idt-okta-auto-approval-webhook" {
   source                = "git::https://github.com/indentapis/integrations//terraform/modules/indent_runtime_aws_lambda"
@@ -19,8 +19,8 @@ module "idt-okta-auto-approval-webhook" {
   indent_webhook_secret = var.indent_webhook_secret
   artifact = {
     bucket       = "indent-artifacts-us-west-2"
-    function_key = "webhooks/aws/lambda/okta-auto-approval-df7a83d97d7220dc20566871e81d90a20ec160e0-function.zip"
-    deps_key     = "webhooks/aws/lambda/okta-auto-approval-df7a83d97d7220dc20566871e81d90a20ec160e0-deps.zip"
+    function_key = "webhooks/aws/lambda/okta-auto-approval-22f653f6d56c4aa555c5bc9943f43acd4e0c0a84-function.zip"
+    deps_key     = "webhooks/aws/lambda/okta-auto-approval-22f653f6d56c4aa555c5bc9943f43acd4e0c0a84-deps.zip"
   }
   env = {
     OKTA_DOMAIN               = var.okta_domain
